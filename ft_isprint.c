@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
@@ -18,8 +20,7 @@ int ft_isprint(int c)
 	return (0);
 }
 
-#include <stdio.h>
-int main(void)
-{
-	printf("if not print return 0: %d", ft_isprint('L'));
-}
+// int main(void)
+// {
+// 	printf("if not print return 0: %d", ft_isprint('L'));
+// }
