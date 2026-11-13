@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-int	pt_sign(const char str)
+int	pt_sign(const char nptr)
 {
 	int	i;
 
 	i = 1;
-	if (str == '-')
+	if (nptr == '-')
 	{
 		i = -i;
 	}
@@ -28,7 +28,7 @@ int	pt_sign(const char str)
 	return (i);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
 	unsigned int	i;
 	long			n;
@@ -38,18 +38,18 @@ int	ft_atoi(const char *str)
 	i = 0;
 	n = 0;
 	sign = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v')
+	while (nptr[i] == ' ' || (nptr[i] >= 7 && nptr[i] <= 13))
 	{
 		i++;
 	}
-	while ((str[i] == '-') || (str[i] == '+'))
+	if ((nptr[i] == '-') || (nptr[i] == '+'))
 	{
-		sign = sign * pt_sign(str[i]);
+		sign = sign * pt_sign(nptr[i]);
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		n = (n * 10) + (str[i] - '0');
+		n = (n * 10) + (nptr[i] - '0');
 		i++;
 	}
 	n = (int)(sign * n);
