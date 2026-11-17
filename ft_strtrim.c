@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 18:04:07 by jovitor           #+#    #+#             */
-/*   Updated: 2026/11/13 18:04:08 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/11/17 16:08:17 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = ft_strlen(s1);
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
-	while (ft_strrchr(set, s1[len]))
+	while (ft_strrchr(set, s1[len - 1]))
 		len--;
 	str = ft_substr(s1, i, len - i + 1);
 	return (str);

@@ -6,27 +6,11 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 17:59:13 by jovitor           #+#    #+#             */
-/*   Updated: 2026/11/13 18:07:36 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/11/17 17:05:01 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	pt_sign(const char nptr)
-{
-	int	i;
-
-	i = 1;
-	if (nptr == '-')
-	{
-		i = -i;
-	}
-	else
-	{
-		i = 1;
-	}
-	return (i);
-}
 
 int	ft_atoi(const char *nptr)
 {
@@ -39,14 +23,14 @@ int	ft_atoi(const char *nptr)
 	n = 0;
 	sign = 1;
 	while (nptr[i] == ' ' || (nptr[i] >= 7 && nptr[i] <= 13))
+		i++;
+	if (nptr[i] == '-')
 	{
+		sign = -sign;
 		i++;
 	}
-	if ((nptr[i] == '-') || (nptr[i] == '+'))
-	{
-		sign = sign * pt_sign(nptr[i]);
+	if (nptr[i] == '+')
 		i++;
-	}
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		n = (n * 10) + (nptr[i] - '0');

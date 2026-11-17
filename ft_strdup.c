@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 18:03:04 by jovitor           #+#    #+#             */
-/*   Updated: 2026/11/17 15:04:38 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/11/17 15:55:27 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *s)
 	dest = malloc((ft_strlen(s) + 1));
 	if (!dest)
 	{
-		return ("Fail to malloc.");
+		return (NULL);
 	}
 	while (s[i] != '\0')
 	{
