@@ -6,17 +6,16 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 12:49:34 by jovitor           #+#    #+#             */
-/*   Updated: 2026/10/27 12:59:48 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/11/13 18:07:06 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);
-	
 	return (0);
 }
 

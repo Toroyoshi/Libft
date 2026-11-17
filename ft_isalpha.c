@@ -6,15 +6,15 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 12:16:19 by jovitor           #+#    #+#             */
-/*   Updated: 2026/10/27 12:47:47 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/11/13 18:05:50 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(char c)
+int	ft_isalpha(char c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <='z'))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
 	return (0);
 }

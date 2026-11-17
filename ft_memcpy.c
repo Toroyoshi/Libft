@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/13 18:01:33 by jovitor           #+#    #+#             */
+/*   Updated: 2026/11/17 14:51:13 by jovitor          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t			i;
 	unsigned char	*t;
@@ -15,7 +26,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 		t1[i] = t[i];
 		i++;
 	}
-	return(dest);
+	return (dest);
 }
 
 // int main(void)

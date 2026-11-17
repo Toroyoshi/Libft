@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/13 17:59:29 by jovitor           #+#    #+#             */
+/*   Updated: 2026/11/17 14:45:54 by jovitor          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void *ptr;
+	void	*ptr;
 	size_t	total_size;
 
 	total_size = 0;
@@ -15,10 +27,10 @@ void *ft_calloc(size_t nmemb, size_t size)
 		total_size = nmemb * size;
 		ptr = malloc(total_size);
 	}
-	if(!ptr)
+	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, total_size);
-	return(ptr);
+	return (ptr);
 }
 
 // int main(void)

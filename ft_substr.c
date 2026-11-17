@@ -1,30 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/13 18:04:11 by jovitor           #+#    #+#             */
+/*   Updated: 2026/11/17 15:09:28 by jovitor          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *result;
-    size_t  i;
+	char	*result;
+	size_t	i;
 
-    i = 0;
-    if (!s)
-        return (NULL);
-    if (start >= ft_strlen(s))
-        return (ft_strdup(""));
-    if (len > ft_strlen(s) - start)
-        len = ft_strlen(s) - start;
-    result = (char *)malloc((len + 1) * sizeof(char));
-    if (!result)
-        return(NULL);
-    else
-    {
-        while (i < len && s[start + i] != '\0')
-        {
-            result[i] = s[start + i];
-            i++;
-        }
-        result[i] = '\0';
-    }
-    return(result);
+	i = 0;
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	result = (char *)malloc((len + 1) * sizeof(char));
+	if (!result)
+		return (NULL);
+	else
+	{
+		while (i < len && s[start + i] != '\0')
+		{
+			result[i] = s[start + i];
+			i++;
+		}
+		result[i] = '\0';
+	}
+	return (result);
 }
 
 // int main(void)

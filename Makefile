@@ -7,14 +7,12 @@ SRC = ft_memcpy.c ft_bzero.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 	ft_strtrim.c ft_split.c ft_substr.c ft_itoa.c ft_strmapi.c \
 	ft_striteri.c ft_memcmp.c\
-
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
 	ft_lstmap.c \
 
 INCLUDE = libft.h
 OBJFILES = $(SRC:%.c=%.o)
-BONUS_0 = $(BONUS:.c=.o)
 CC = cc
 FLAGS = -Wall -Wextra -Werror
 
@@ -25,17 +23,12 @@ $(NAME): $(OBJFILES) $(INCLUDE)
 
 %.o: %.c $(INCLUDE)
 	$(CC) $(FLAGS) -c $< -I . -o $@
-	
-bonus: $(BONUS_0) $(OBJFILES)
-	ar -rcs $(NAME) $(BONUS_0) $(OBJFILES)
-	touch bonus
 
 clean:
-	rm -rf $(OBJFILES) $(BONUS_0)
+	rm -rf $(OBJFILES)
 
 fclean: clean
 	rm -rf $(NAME)
-	rm -f bonus
 
 re: fclean all
 

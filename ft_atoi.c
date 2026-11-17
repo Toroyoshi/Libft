@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/20 17:17:58 by jovitor           #+#    #+#             */
-/*   Updated: 2026/09/23 16:00:20 by jovitor          ###   ########.fr       */
+/*   Created: 2026/11/13 17:59:13 by jovitor           #+#    #+#             */
+/*   Updated: 2026/11/13 18:07:36 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,12 +57,10 @@ int	ft_atoi(const char *nptr)
 	return (r);
 }
 
-
 // int	main(void)
 // {
 // 	char	str[] = "   -+-123";
 // 	int		resultado;
-
 // 	resultado = ft_atoi(str);
 // 	printf("Resultado: %d\n", resultado);
 // 	return (0);

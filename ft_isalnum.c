@@ -6,15 +6,15 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 12:22:19 by jovitor           #+#    #+#             */
-/*   Updated: 2026/10/27 12:47:56 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/11/13 18:05:32 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(char c)
+int	ft_isalnum(char c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <='z'))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
 	if (c >= '0' && c <= '9')
 		return (1);

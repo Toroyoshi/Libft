@@ -6,17 +6,16 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 12:37:16 by jovitor           #+#    #+#             */
-/*   Updated: 2026/10/27 12:48:34 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/11/13 18:06:28 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii (int c)
+int	ft_isascii(int c)
 {
 	if (c < 0 || c > 127)
 		return (0);
-	
 	return (1);
 }
 

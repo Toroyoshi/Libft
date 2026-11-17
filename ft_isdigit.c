@@ -6,16 +6,15 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 12:23:02 by jovitor           #+#    #+#             */
-/*   Updated: 2026/10/27 12:48:20 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/11/13 18:06:43 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(char c)
+int	ft_isdigit(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
-	
 	return (0);
 }
