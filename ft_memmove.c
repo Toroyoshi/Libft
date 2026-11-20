@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//Copia n bytes entre zonas de memória, suportando sobreposição.
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t				i;

@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//Cria um novo nó, guarda o conteúdo recebido e inicializa next a NULL.
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;

@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//Compara duas zonas de memória byte a byte.
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*a;
@@ -29,3 +29,31 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+// #include <assert.h>
+
+// int main(void)
+// {
+//     char    str1[] = "Hello";
+//     char    str2[] = "Hello";
+//     char    str3[] = "Hallo";
+//     int     result;
+
+//     // Test 1: Compare different memory areas
+//     result = ft_memcmp(str1, str3, 5);
+
+//     assert(result != 0);
+//     assert(result == ('e' - 'a'));
+
+//     printf("Test 1 passed: different memory\n");
+
+//     // Test 2: Compare identical memory areas 
+//     result = ft_memcmp(str1, str2, 5);
+
+//     assert(result == 0);
+
+//     printf("Test 2 passed: identical memory\n");
+
+//     printf("\nAll tests passed!\n");
+//     return (0);
+// }

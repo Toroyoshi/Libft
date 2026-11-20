@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//Preenche os primeiros n bytes de uma memória com determinado valor.
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t			i;
@@ -26,3 +27,13 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+// int main(void)
+// {
+// 	char str[] = "Hello";
+
+// 	printf("original: %s \n", str);
+// 	ft_memset(str, 'A', 5);
+// 	printf("pós memset: %s \n", str);
+// 	return (0);
+// }
