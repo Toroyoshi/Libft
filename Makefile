@@ -11,17 +11,16 @@ SRC = ft_bzero.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
 	ft_lstmap.c \
 
-INCLUDE = libft.h
 OBJFILES = $(SRC:%.c=%.o)
 CC = cc
 FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJFILES) $(INCLUDE)
+$(NAME): $(OBJFILES)
 	ar -rcs $(NAME) $(OBJFILES)
 
-%.o: %.c $(INCLUDE)
+%.o: %.c
 	$(CC) $(FLAGS) -c $< -I . -o $@
 
 clean:

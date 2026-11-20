@@ -6,12 +6,12 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 18:04:11 by jovitor           #+#    #+#             */
-/*   Updated: 2026/11/17 15:09:28 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/11/20 19:43:41 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//duplica a string
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*result;

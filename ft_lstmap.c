@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//Cria uma nova lista aplicando uma função ao conteúdo de cada nó da lista original.
+//nova lista aplicando uma função ao conteúdo de cada nó da lista original.
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
@@ -39,8 +39,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 // static void *make_upper(void *content)
 // {
-//     char    *src;
-//     char    *dst;
+// 	char    *src;
+// 	char    *dst;
 //     int     i;
 
 //     src = (char *)content;
@@ -64,8 +64,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 //         printf("%s\n", (char *)lst->content);
 //         lst = lst->next;
 //     }
-// }
-
 // static void del_content(void *content)
 // {
 //     free(content);

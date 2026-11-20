@@ -6,12 +6,13 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 18:02:50 by jovitor           #+#    #+#             */
-/*   Updated: 2026/11/17 15:04:24 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/11/20 21:11:59 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Conta a quantidade de palavras
 static unsigned int	ft_countwords(char const *s, char c)
 {
 	unsigned int	i;
@@ -31,6 +32,7 @@ static unsigned int	ft_countwords(char const *s, char c)
 	return (words);
 }
 
+//tamanho da palavra
 static unsigned int	ft_wordlen(char const *s, char c)
 {
 	unsigned int	i;
@@ -41,6 +43,7 @@ static unsigned int	ft_wordlen(char const *s, char c)
 	return (i);
 }
 
+//free
 static void	ft_free(char **split, unsigned int count)
 {
 	while (count > 0)
@@ -48,6 +51,7 @@ static void	ft_free(char **split, unsigned int count)
 	free(split);
 }
 
+//O split em si, duplica a parte da string que a gente quer
 static int	mini_split(char **split, char const *s, char c,
 				unsigned int count)
 {
@@ -70,6 +74,7 @@ static int	mini_split(char **split, char const *s, char c,
 	return (1);
 }
 
+//junta tudo
 char	**ft_split(char const *s, char c)
 {
 	char			**split;
@@ -85,3 +90,23 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (split);
 }
+
+// int main(void)
+// {
+//     char    **result;
+//     int     i;
+
+//     result = ft_split("Fala meu mano", ' ');
+//     if (!result)
+//         return (1);
+
+//     i = 0;
+//     while (result[i])
+//     {
+//         printf("%s\n", result[i]);
+//         free(result[i]);
+//         i++;
+//     }
+//     free(result);
+//     return (0);
+// }

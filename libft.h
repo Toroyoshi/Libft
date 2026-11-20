@@ -6,20 +6,16 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 14:37:42 by jovitor           #+#    #+#             */
-/*   Updated: 2026/11/17 14:43:18 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/11/20 21:13:57 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <string.h>
-# include <stddef.h>
 # include <stdint.h>
-# include <fcntl.h>
 
 typedef struct s_list
 {
@@ -30,10 +26,10 @@ typedef struct s_list
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
-int		ft_isalnum(char c);
-int		ft_isalpha(char c);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
 int		ft_isascii(int c);
-int		ft_isdigit(char c);
+int		ft_isdigit(int c);
 int		ft_isprint(int c);
 char	*ft_itoa(int n);
 void	ft_lstadd_back(t_list **lst, t_list *new);

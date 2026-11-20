@@ -6,7 +6,7 @@
 /*   By: jovitor <jovitor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 17:59:13 by jovitor           #+#    #+#             */
-/*   Updated: 2026/11/17 17:05:01 by jovitor          ###   ########.fr       */
+/*   Updated: 2026/11/20 19:27:54 by jovitor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,12 @@ int	ft_atoi(const char *nptr)
 	sign = 1;
 	while (nptr[i] == ' ' || (nptr[i] >= 7 && nptr[i] <= 13))
 		i++;
-	if (nptr[i] == '-')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		sign = -sign;
+		if (nptr[i] == '-')
+			sign = -1;
 		i++;
 	}
-	if (nptr[i] == '+')
-		i++;
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		n = (n * 10) + (nptr[i] - '0');
@@ -43,7 +42,7 @@ int	ft_atoi(const char *nptr)
 
 // int	main(void)
 // {
-// 	char	str[] = "   -+-123";
+// 	char	str[] = "-+42";
 // 	int		resultado;
 // 	resultado = ft_atoi(str);
 // 	printf("Resultado: %d\n", resultado);

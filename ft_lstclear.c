@@ -46,23 +46,23 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 
 //     lst = NULL;
 
-//     /* Test 1: Clear an empty list */
+//     //Test 1: Clear an empty list
 //     ft_lstclear(&lst, del_content);
 //     assert(lst == NULL);
 //     printf("Test 1 passed: empty list\n");
 
-//     /* Test 2: NULL arguments */
+// 	//Test 2: NULL arguments
 //     ft_lstclear(NULL, del_content);
 //     ft_lstclear(&lst, NULL);
 //     assert(lst == NULL);
 //     printf("Test 2 passed: NULL arguments\n");
 
-//     /* Test 3: Clear a list with three nodes */
+// 	//Test 3: Clear a list with three nodes
 //     node1 = ft_lstnew("Primeiro");
 //     node2 = ft_lstnew("Segundo");
 //     node3 = ft_lstnew("Terceiro");
 
-//     /* Check memory allocation */
+//     // Check memory allocation
 //     if (!node1 || !node2 || !node3)
 //     {
 //         free(node1);
@@ -82,13 +82,13 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 
 //     printf("Test 3 passed: list created with three nodes\n");
 
-//     /* Clear the entire list */
+//     // Clear the entire list
 //     ft_lstclear(&lst, del_content);
 
 //     assert(lst == NULL);
 //     printf("Test 4 passed: all nodes cleared\n");
 
-//     /* Test 5: Clear an already cleared list */
+//     //Test 5: Clear an already cleared list
 //     ft_lstclear(&lst, del_content);
 //     assert(lst == NULL);
 //     printf("Test 5 passed: clearing an empty list again\n");
